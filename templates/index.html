@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="header">
+            <img id="iris_img" src="{{url_for('static', filename='iris.png')}}" width="50%">
+            <h1 id="title">Iris Classifier</h1>
+        </div>
+
+        <form id="form" method="POST" action="{{ url_for('predict') }}">
+            <input name="sepal_len" type="text" placeholder="Sepal Length Cm"> <br>
+            <input name="sepal_wid" type="text" placeholder="Sepal Width Cm"> <br>
+            <input name="petal_len" type="text" placeholder="Petal Length Cm"> <br>
+            <input name="petal_wid" type="text" placeholder="Petal Width Cm"> <br>
+    
+            <input type="submit" id="submit" value="Classificar">
+        </form>
+    </main>
+
+</body>
+</html>
